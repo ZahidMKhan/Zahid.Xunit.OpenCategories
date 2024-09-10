@@ -1,5 +1,5 @@
 # Xunit.OpenCategories
-Friendlier attributes to help categorize your tests.
+Friendlier attributes to help categorise your tests.
 
 ## History
 
