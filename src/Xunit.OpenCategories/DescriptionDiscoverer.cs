@@ -1,30 +1,17 @@
-﻿using System.Collections.Generic;
-using Xunit.Abstractions;
-using Xunit.Sdk;
+﻿using Xunit.OpenCategories.Discoverers;
 
 namespace Xunit.OpenCategories
 {
     /// <summary>
     /// Discovers the traits for the <see cref="DescriptionAttribute"/>.
     /// </summary>
-    public class DescriptionDiscoverer : ITraitDiscoverer
+    // ReSharper disable once ClassNeverInstantiated.Global
+    public class DescriptionDiscoverer : TraitWithStringDiscoverer<DescriptionDiscoverer>
     {
-        /// <summary>
-        /// The fully qualified type name of the discoverer.
-        /// </summary>
-        internal const string DiscovererTypeName = DiscovererUtil.AssemblyName + "." + nameof(DescriptionDiscoverer);
-
-        /// <summary>
-        /// Gets the traits for the specified trait attribute.
-        /// </summary>
-        /// <param name="traitAttribute">The trait attribute containing the description information.</param>
-        /// <returns>An enumerable of key-value pairs representing the traits.</returns>
-        public IEnumerable<KeyValuePair<string, string>> GetTraits(IAttributeInfo traitAttribute)
-        {
-            var description = traitAttribute.GetNamedArgument<string>("Description");
-
-            if (!string.IsNullOrWhiteSpace(description))
-                yield return new KeyValuePair<string, string>("Description", description);
-        }
+        /// <inheritdoc />
+        protected override string NamedArgumentName => "Description";
+        
+        /// <inheritdoc />
+        protected override string AttributeName => "Description";
     }
 }
