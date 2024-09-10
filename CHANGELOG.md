@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0.1] - 2024-09-10
+
 ### Added
 
 - Forked from [Xunit.Categories](https://github.com/brendanconnolly/Xunit.Categories)
@@ -15,3 +17,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added a changelog
 - Modified to use custom GA workflows
 - Published to NuGet
+
+[unreleased]: https://github.com/baynezy/Xunit.OpenCategories/compare/1.0.0.1...HEAD
+[1.0.0.1]: https://github.com/baynezy/Xunit.OpenCategories/compare/12759d2d3b8613ed850a1d018ac1779cbb798a37...1.0.0.1
