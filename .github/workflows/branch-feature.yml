@@ -15,6 +15,7 @@ on:
 
 jobs:
   get-version:
+    if: ${{ github.actor != 'dependabot[bot]' }}
     uses: ./.github/workflows/step-version.yml
     secrets: inherit
     with:
