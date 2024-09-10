@@ -6,6 +6,7 @@
         <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
         <PackageProjectUrl>https://github.com/baynezy/Xunit.OpenCategories</PackageProjectUrl>
         <Description>Friendlier attributes to help categorise your tests.</Description>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageTags>Xunit,Testing</PackageTags>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
     </PropertyGroup>
@@ -17,6 +18,10 @@
 
     <ItemGroup>
         <PackageReference Include="xunit.core" Version="2.4.1"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="README.md" Pack="true" PackagePath="/"/>
     </ItemGroup>
 
 </Project>
