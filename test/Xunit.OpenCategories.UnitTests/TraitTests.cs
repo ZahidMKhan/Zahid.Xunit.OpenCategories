@@ -72,6 +72,16 @@ namespace Xunit.OpenCategories.UnitTests
                 .And.BeDecoratedWith<BugAttribute>()
                 .Which.Id.Should().Be("777");
         }
+        
+        [Fact]
+        [Feature]
+        public void Feature()
+        {
+            var testMethod = typeof(TraitTests).GetMethod(nameof(Feature));
+            testMethod.Should()
+                .BeDecoratedWith<FactAttribute>()
+                .And.BeDecoratedWith<FeatureAttribute>();
+        }
 
         [Fact, IntegrationTest]
         [Feature(888)]
@@ -128,6 +138,16 @@ namespace Xunit.OpenCategories.UnitTests
                 .And.BeDecoratedWith<KnownBugAttribute>()
                 .Which.Id.Should().Be("666 a");
         }
+        
+        [Fact]
+        [Documentation]
+        public void Documentation()
+        {
+            var testMethod = typeof(TraitTests).GetMethod(nameof(Documentation));
+            testMethod.Should()
+                .BeDecoratedWith<FactAttribute>()
+                .And.BeDecoratedWith<DocumentationAttribute>();
+        }
 
         [Fact]
         [Documentation(666)]
@@ -149,6 +169,16 @@ namespace Xunit.OpenCategories.UnitTests
                 .BeDecoratedWith<FactAttribute>()
                 .And.BeDecoratedWith<DocumentationAttribute>()
                 .Which.WorkItemId.Should().Be("666 a");
+        }
+        
+        [Fact]
+        [Exploratory]
+        public void Exploratory()
+        {
+            var testMethod = typeof(TraitTests).GetMethod(nameof(Exploratory));
+            testMethod.Should()
+                .BeDecoratedWith<FactAttribute>()
+                .And.BeDecoratedWith<ExploratoryAttribute>();
         }
 
         [Fact]
@@ -172,6 +202,16 @@ namespace Xunit.OpenCategories.UnitTests
                 .And.BeDecoratedWith<ExploratoryAttribute>()
                 .Which.WorkItemId.Should().Be("666 a");
         }
+        
+        [Fact]
+        [WorkItem]
+        public void WorkItem()
+        {
+            var testMethod = typeof(TraitTests).GetMethod(nameof(WorkItem));
+            testMethod.Should()
+                .BeDecoratedWith<FactAttribute>()
+                .And.BeDecoratedWith<WorkItemAttribute>();
+        }
 
         [Fact]
         [WorkItem(666)]
@@ -193,6 +233,16 @@ namespace Xunit.OpenCategories.UnitTests
                 .BeDecoratedWith<FactAttribute>()
                 .And.BeDecoratedWith<WorkItemAttribute>()
                 .Which.WorkItemId.Should().Be("666 a");
+        }
+        
+        [Fact]
+        [SystemTest]
+        public void SystemTest()
+        {
+            var testMethod = typeof(TraitTests).GetMethod(nameof(SystemTest));
+            testMethod.Should()
+                .BeDecoratedWith<FactAttribute>()
+                .And.BeDecoratedWith<SystemTestAttribute>();
         }
 
         [Fact]
@@ -216,6 +266,16 @@ namespace Xunit.OpenCategories.UnitTests
                 .And.BeDecoratedWith<SystemTestAttribute>()
                 .Which.Id.Should().Be("666 a");
         }
+        
+        [Fact]
+        [TestCase]
+        public void TestCase()
+        {
+            var testMethod = typeof(TraitTests).GetMethod(nameof(TestCase));
+            testMethod.Should()
+                .BeDecoratedWith<FactAttribute>()
+                .And.BeDecoratedWith<TestCaseAttribute>();
+        }
 
         [Fact]
         [TestCase(999)]
@@ -237,6 +297,16 @@ namespace Xunit.OpenCategories.UnitTests
                 .BeDecoratedWith<FactAttribute>()
                 .And.BeDecoratedWith<TestCaseAttribute>()
                 .Which.TestCaseId.Should().Be("999");
+        }
+        
+        [Fact]
+        [LocalTest]
+        public void LocalTest()
+        {
+            var testMethod = typeof(TraitTests).GetMethod(nameof(LocalTest));
+            testMethod.Should()
+                .BeDecoratedWith<FactAttribute>()
+                .And.BeDecoratedWith<LocalTestAttribute>();
         }
 
         [Fact]
@@ -281,6 +351,113 @@ namespace Xunit.OpenCategories.UnitTests
                 .BeDecoratedWith<FactAttribute>()
                 .And.BeDecoratedWith<DescriptionAttribute>()
                 .Which.Description.Should().Be("All your base are belong to us");
+        }
+        
+        [Fact]
+        [Category("CategoryName")]
+        public void Category_String()
+        {
+            var testMethod = typeof(TraitTests).GetMethod(nameof(Category_String));
+            testMethod.Should()
+                .BeDecoratedWith<FactAttribute>()
+                .And.BeDecoratedWith<CategoryAttribute>()
+                .Which.Name.Should().Be("CategoryName");
+        }
+        
+        [Fact]
+        [Specification]
+        public void Specification()
+        {
+            var testMethod = typeof(TraitTests).GetMethod(nameof(Specification));
+            testMethod.Should()
+                .BeDecoratedWith<FactAttribute>()
+                .And.BeDecoratedWith<SpecificationAttribute>();
+        }
+        
+        [Fact]
+        [Specification("SpecificationName")]
+        public void Specification_String()
+        {
+            var testMethod = typeof(TraitTests).GetMethod(nameof(Specification_String));
+            testMethod.Should()
+                .BeDecoratedWith<FactAttribute>()
+                .And.BeDecoratedWith<SpecificationAttribute>()
+                .Which.Identifier.Should().Be("SpecificationName");
+        }
+        
+        [Fact]
+        [Specification(999)]
+        public void Specification_Long()
+        {
+            var testMethod = typeof(TraitTests).GetMethod(nameof(Specification_Long));
+            testMethod.Should()
+                .BeDecoratedWith<FactAttribute>()
+                .And.BeDecoratedWith<SpecificationAttribute>()
+                .Which.Identifier.Should().Be("999");
+        }
+        
+        [Fact]
+        [UnitTest]
+        public void UnitTest()
+        {
+            var testMethod = typeof(TraitTests).GetMethod(nameof(UnitTest));
+            testMethod.Should()
+                .BeDecoratedWith<FactAttribute>()
+                .And.BeDecoratedWith<UnitTestAttribute>();
+        }
+        
+        [Fact]
+        [UnitTest("UnitTestName")]
+        public void UnitTest_String()
+        {
+            var testMethod = typeof(TraitTests).GetMethod(nameof(UnitTest_String));
+            testMethod.Should()
+                .BeDecoratedWith<FactAttribute>()
+                .And.BeDecoratedWith<UnitTestAttribute>()
+                .Which.Identifier.Should().Be("UnitTestName");
+        }
+        
+        [Fact]
+        [UnitTest(999)]
+        public void UnitTest_Long()
+        {
+            var testMethod = typeof(TraitTests).GetMethod(nameof(UnitTest_Long));
+            testMethod.Should()
+                .BeDecoratedWith<FactAttribute>()
+                .And.BeDecoratedWith<UnitTestAttribute>()
+                .Which.Identifier.Should().Be("999");
+        }
+        
+        [Fact]
+        [UserStory]
+        public void UserStory()
+        {
+            var testMethod = typeof(TraitTests).GetMethod(nameof(UserStory));
+            testMethod.Should()
+                .BeDecoratedWith<FactAttribute>()
+                .And.BeDecoratedWith<UserStoryAttribute>();
+        }
+        
+        [Fact]
+        [UserStory("UserStoryName")]
+        public void UserStory_String()
+        {
+            var testMethod = typeof(TraitTests).GetMethod(nameof(UserStory_String));
+            testMethod.Should()
+                .BeDecoratedWith<FactAttribute>()
+                .And.BeDecoratedWith<UserStoryAttribute>()
+                .Which.Identifier.Should().Be("UserStoryName");
+        }
+        
+        [Fact]
+        [UserStory(999)]
+        public void UserStory_Long()
+        {
+            var testMethod = typeof(TraitTests).GetMethod(nameof(UserStory_Long));
+            testMethod.Should()
+                .BeDecoratedWith<FactAttribute>()
+                .And.BeDecoratedWith<UserStoryAttribute>()
+                .Which.Identifier.Should().Be("999");
         }
     }
 }
