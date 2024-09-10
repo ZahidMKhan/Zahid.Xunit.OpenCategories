@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## Changed
+
+- Split tests to be single file per attribute for readability
+
 ## [1.0.2.2] - 2024-09-10
 
 ## Added
