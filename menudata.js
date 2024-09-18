@@ -61,12 +61,6 @@ var menudata={children:[
 {text:"t",url:"functions_func.html#index_t"},
 {text:"u",url:"functions_func.html#index_u"},
 {text:"w",url:"functions_func.html#index_w"}]},
-{text:"Properties",url:"functions_prop.html",children:[
-{text:"a",url:"functions_prop.html#index_a"},
-{text:"d",url:"functions_prop.html#index_d"},
-{text:"i",url:"functions_prop.html#index_i"},
-{text:"n",url:"functions_prop.html#index_n"},
-{text:"t",url:"functions_prop.html#index_t"},
-{text:"w",url:"functions_prop.html#index_w"}]}]}]},
+{text:"Properties",url:"functions_prop.html"}]}]},
 {text:"Files",url:"files.html",children:[
 {text:"File List",url:"files.html"}]}]}
