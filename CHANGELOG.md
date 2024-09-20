@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
  - Added `Component` attribute
+ - Improved descriptions for attributes
 
 ## [1.0.4.5] - 2024-09-18
 

@@ -4,7 +4,8 @@ using Xunit.Sdk;
 namespace Xunit.OpenCategories
 {
     /// <summary>
-    /// For annotating tests that have a mainly documentative purpose, as sometimes a piece of code says more than a 1000 words API Documentation.
+    /// For annotating tests that have a mainly documentative purpose, as sometimes a piece of code says more
+    /// than a 1000 words API Documentation.
     /// </summary>
     /// <remarks>
     /// This attribute can be applied to both classes and methods, and it supports multiple usages.
