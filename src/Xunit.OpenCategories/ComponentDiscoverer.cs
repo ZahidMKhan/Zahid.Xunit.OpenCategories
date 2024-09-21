@@ -21,13 +21,10 @@ namespace Xunit.OpenCategories
         /// <returns>An enumerable of key-value pairs representing the traits.</returns>
         public IEnumerable<KeyValuePair<string, string>> GetTraits(IAttributeInfo traitAttribute)
         {
-            // Retrieve the "ComponentName" named argument from the trait attribute
             var name = traitAttribute.GetNamedArgument<string>("ComponentName");
 
-            // Yield a key-value pair representing the category as "Component"
             yield return new KeyValuePair<string, string>("Category", "Component");
 
-            // If the ComponentName is not null or whitespace, yield a key-value pair for the component information
             if (!string.IsNullOrWhiteSpace(name))
                 yield return new KeyValuePair<string, string>("Component", name);
         }

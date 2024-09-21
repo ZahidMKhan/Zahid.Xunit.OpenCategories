@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
  - Added `Component` attribute
  - Improved descriptions for attributes
+ - Add additional testing for discoverers
 
 ## [1.0.4.5] - 2024-09-18
 
