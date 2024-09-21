@@ -2,13 +2,13 @@
 
 namespace Xunit.OpenCategories.UnitTests;
 
-public class SpecificationTests
+public class SpecificationAttributeTests
 {
     [Fact]
     [Specification]
     public void Specification()
     {
-        var testMethod = typeof(SpecificationTests).GetMethod(nameof(Specification));
+        var testMethod = typeof(SpecificationAttributeTests).GetMethod(nameof(Specification));
         testMethod.Should()
             .BeDecoratedWith<FactAttribute>()
             .And.BeDecoratedWith<SpecificationAttribute>();
@@ -18,7 +18,7 @@ public class SpecificationTests
     [Specification("SpecificationName")]
     public void Specification_String()
     {
-        var testMethod = typeof(SpecificationTests).GetMethod(nameof(Specification_String));
+        var testMethod = typeof(SpecificationAttributeTests).GetMethod(nameof(Specification_String));
         testMethod.Should()
             .BeDecoratedWith<FactAttribute>()
             .And.BeDecoratedWith<SpecificationAttribute>()
@@ -29,7 +29,7 @@ public class SpecificationTests
     [Specification(999)]
     public void Specification_Long()
     {
-        var testMethod = typeof(SpecificationTests).GetMethod(nameof(Specification_Long));
+        var testMethod = typeof(SpecificationAttributeTests).GetMethod(nameof(Specification_Long));
         testMethod.Should()
             .BeDecoratedWith<FactAttribute>()
             .And.BeDecoratedWith<SpecificationAttribute>()

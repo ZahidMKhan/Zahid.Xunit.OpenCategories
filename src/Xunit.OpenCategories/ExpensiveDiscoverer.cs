@@ -21,7 +21,6 @@ namespace Xunit.OpenCategories
         /// <returns>An enumerable of key-value pairs representing the traits.</returns>
         public IEnumerable<KeyValuePair<string, string>> GetTraits(IAttributeInfo traitAttribute)
         {
-            // Yield a key-value pair representing the category as "Expensive"
             yield return new KeyValuePair<string, string>("Category", "Expensive");
         }
     }

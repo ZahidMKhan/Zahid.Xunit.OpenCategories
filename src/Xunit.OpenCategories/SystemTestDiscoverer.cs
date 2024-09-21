@@ -21,13 +21,10 @@ namespace Xunit.OpenCategories
         /// <returns>An enumerable of key-value pairs representing the traits.</returns>
         public IEnumerable<KeyValuePair<string, string>> GetTraits(IAttributeInfo traitAttribute)
         {
-            // Retrieve the "Id" named argument from the trait attribute
             var bugId = traitAttribute.GetNamedArgument<string>("Id");
 
-            // Yield a key-value pair representing the category as "SystemTest"
             yield return new KeyValuePair<string, string>("Category", "SystemTest");
 
-            // If the Id is not null or whitespace, yield a key-value pair for the system test information
             if (!string.IsNullOrWhiteSpace(bugId))
                 yield return new KeyValuePair<string, string>("SystemTest", bugId);
         }

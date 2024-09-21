@@ -2,13 +2,13 @@
 
 namespace Xunit.OpenCategories.UnitTests;
 
-public class UserStoryTests
+public class UserStoryAttributeTests
 {
     [Fact]
     [UserStory]
     public void UserStory()
     {
-        var testMethod = typeof(UserStoryTests).GetMethod(nameof(UserStory));
+        var testMethod = typeof(UserStoryAttributeTests).GetMethod(nameof(UserStory));
         testMethod.Should()
             .BeDecoratedWith<FactAttribute>()
             .And.BeDecoratedWith<UserStoryAttribute>();
@@ -18,7 +18,7 @@ public class UserStoryTests
     [UserStory("UserStoryName")]
     public void UserStory_String()
     {
-        var testMethod = typeof(UserStoryTests).GetMethod(nameof(UserStory_String));
+        var testMethod = typeof(UserStoryAttributeTests).GetMethod(nameof(UserStory_String));
         testMethod.Should()
             .BeDecoratedWith<FactAttribute>()
             .And.BeDecoratedWith<UserStoryAttribute>()
@@ -29,7 +29,7 @@ public class UserStoryTests
     [UserStory(999)]
     public void UserStory_Long()
     {
-        var testMethod = typeof(UserStoryTests).GetMethod(nameof(UserStory_Long));
+        var testMethod = typeof(UserStoryAttributeTests).GetMethod(nameof(UserStory_Long));
         testMethod.Should()
             .BeDecoratedWith<FactAttribute>()
             .And.BeDecoratedWith<UserStoryAttribute>()

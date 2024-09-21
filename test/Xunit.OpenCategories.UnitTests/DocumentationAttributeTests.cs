@@ -2,13 +2,13 @@
 
 namespace Xunit.OpenCategories.UnitTests;
 
-public class DocumentationTests
+public class DocumentationAttributeTests
 {
     [Fact]
     [Documentation]
     public void Documentation()
     {
-        var testMethod = typeof(DocumentationTests).GetMethod(nameof(Documentation));
+        var testMethod = typeof(DocumentationAttributeTests).GetMethod(nameof(Documentation));
         testMethod.Should()
             .BeDecoratedWith<FactAttribute>()
             .And.BeDecoratedWith<DocumentationAttribute>();
@@ -18,7 +18,7 @@ public class DocumentationTests
     [Documentation(666)]
     public void Documentation_Integer()
     {
-        var testMethod = typeof(DocumentationTests).GetMethod(nameof(Documentation_Integer));
+        var testMethod = typeof(DocumentationAttributeTests).GetMethod(nameof(Documentation_Integer));
         testMethod.Should()
             .BeDecoratedWith<FactAttribute>()
             .And.BeDecoratedWith<DocumentationAttribute>()
@@ -29,7 +29,7 @@ public class DocumentationTests
     [Documentation("666 a")]
     public void Documentation_String()
     {
-        var testMethod = typeof(DocumentationTests).GetMethod(nameof(Documentation_String));
+        var testMethod = typeof(DocumentationAttributeTests).GetMethod(nameof(Documentation_String));
         testMethod.Should()
             .BeDecoratedWith<FactAttribute>()
             .And.BeDecoratedWith<DocumentationAttribute>()

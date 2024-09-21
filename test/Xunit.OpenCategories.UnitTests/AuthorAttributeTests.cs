@@ -2,13 +2,13 @@
 
 namespace Xunit.OpenCategories.UnitTests;
 
-public class AuthorTests
+public class AuthorAttributeTests
 {
     [Fact]
     [Author("Henry David Thoreau")]
     public void Author()
     {
-        var testMethod = typeof(AuthorTests).GetMethod(nameof(Author));
+        var testMethod = typeof(AuthorAttributeTests).GetMethod(nameof(Author));
         testMethod.Should()
             .BeDecoratedWith<FactAttribute>()
             .And.BeDecoratedWith<AuthorAttribute>()

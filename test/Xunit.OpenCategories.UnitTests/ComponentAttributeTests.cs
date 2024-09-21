@@ -2,13 +2,13 @@
 
 namespace Xunit.OpenCategories.UnitTests;
 
-public class ComponentTests
+public class ComponentAttributeTests
 {
     [Fact]
     [Component]
     public void Component()
     {
-        var testMethod = typeof(ComponentTests).GetMethod(nameof(Component));
+        var testMethod = typeof(ComponentAttributeTests).GetMethod(nameof(Component));
         testMethod.Should()
             .BeDecoratedWith<FactAttribute>()
             .And.BeDecoratedWith<ComponentAttribute>();
@@ -17,7 +17,7 @@ public class ComponentTests
     [Component("Service X")]
     public void ComponentWithName()
     {
-        var testMethod = typeof(ComponentTests).GetMethod(nameof(ComponentWithName));
+        var testMethod = typeof(ComponentAttributeTests).GetMethod(nameof(ComponentWithName));
         testMethod.Should()
             .BeDecoratedWith<FactAttribute>()
             .And.BeDecoratedWith<ComponentAttribute>()
