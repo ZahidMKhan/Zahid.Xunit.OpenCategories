@@ -2,13 +2,13 @@
 
 namespace Xunit.OpenCategories.UnitTests;
 
-public class FeatureTests
+public class FeatureAttributeTests
 {
     [Fact]
     [Feature]
     public void Feature()
     {
-        var testMethod = typeof(FeatureTests).GetMethod(nameof(Feature));
+        var testMethod = typeof(FeatureAttributeTests).GetMethod(nameof(Feature));
         testMethod.Should()
             .BeDecoratedWith<FactAttribute>()
             .And.BeDecoratedWith<FeatureAttribute>();
@@ -18,7 +18,7 @@ public class FeatureTests
     [Feature(888)]
     public void FeatureWithId_Integer()
     {
-        var testMethod = typeof(FeatureTests).GetMethod(nameof(FeatureWithId_Integer));
+        var testMethod = typeof(FeatureAttributeTests).GetMethod(nameof(FeatureWithId_Integer));
         testMethod.Should()
             .BeDecoratedWith<FactAttribute>()
             .And.BeDecoratedWith<IntegrationTestAttribute>()
@@ -30,7 +30,7 @@ public class FeatureTests
     [Feature("888")]
     public void FeatureWithId_String()
     {
-        var testMethod = typeof(FeatureTests).GetMethod(nameof(FeatureWithId_String));
+        var testMethod = typeof(FeatureAttributeTests).GetMethod(nameof(FeatureWithId_String));
         testMethod.Should()
             .BeDecoratedWith<FactAttribute>()
             .And.BeDecoratedWith<IntegrationTestAttribute>()

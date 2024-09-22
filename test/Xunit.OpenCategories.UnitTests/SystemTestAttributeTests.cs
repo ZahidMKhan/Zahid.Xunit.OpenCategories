@@ -2,13 +2,13 @@
 
 namespace Xunit.OpenCategories.UnitTests;
 
-public class SystemTestTests
+public class SystemTestAttributeTests
 {
     [Fact]
     [SystemTest]
     public void SystemTest()
     {
-        var testMethod = typeof(SystemTestTests).GetMethod(nameof(SystemTest));
+        var testMethod = typeof(SystemTestAttributeTests).GetMethod(nameof(SystemTest));
         testMethod.Should()
             .BeDecoratedWith<FactAttribute>()
             .And.BeDecoratedWith<SystemTestAttribute>();
@@ -18,7 +18,7 @@ public class SystemTestTests
     [SystemTest(666)]
     public void SystemTest_Integer()
     {
-        var testMethod = typeof(SystemTestTests).GetMethod(nameof(SystemTest_Integer));
+        var testMethod = typeof(SystemTestAttributeTests).GetMethod(nameof(SystemTest_Integer));
         testMethod.Should()
             .BeDecoratedWith<FactAttribute>()
             .And.BeDecoratedWith<SystemTestAttribute>()
@@ -29,7 +29,7 @@ public class SystemTestTests
     [SystemTest("666 a")]
     public void SystemTest_String()
     {
-        var testMethod = typeof(SystemTestTests).GetMethod(nameof(SystemTest_String));
+        var testMethod = typeof(SystemTestAttributeTests).GetMethod(nameof(SystemTest_String));
         testMethod.Should()
             .BeDecoratedWith<FactAttribute>()
             .And.BeDecoratedWith<SystemTestAttribute>()

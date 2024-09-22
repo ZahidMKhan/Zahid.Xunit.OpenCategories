@@ -23,10 +23,8 @@ namespace Xunit.OpenCategories
         {
             var bugId = traitAttribute.GetNamedArgument<string>("Id");
 
-            // Yield a key-value pair representing the category as "Bug"
             yield return new KeyValuePair<string, string>("Category", "Bug");
 
-            // If the bug ID is not null or whitespace, yield a key-value pair for the bug ID
             if (!string.IsNullOrWhiteSpace(bugId))
                 yield return new KeyValuePair<string, string>("Bug", bugId);
         }

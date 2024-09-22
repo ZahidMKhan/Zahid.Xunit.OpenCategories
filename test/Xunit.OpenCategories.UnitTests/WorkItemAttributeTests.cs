@@ -2,13 +2,13 @@
 
 namespace Xunit.OpenCategories.UnitTests;
 
-public class WorkItemsTests
+public class WorkItemAttributeTests
 {
     [Fact]
     [WorkItem]
     public void WorkItem()
     {
-        var testMethod = typeof(WorkItemsTests).GetMethod(nameof(WorkItem));
+        var testMethod = typeof(WorkItemAttributeTests).GetMethod(nameof(WorkItem));
         testMethod.Should()
             .BeDecoratedWith<FactAttribute>()
             .And.BeDecoratedWith<WorkItemAttribute>();
@@ -18,7 +18,7 @@ public class WorkItemsTests
     [WorkItem(666)]
     public void WorkItem_Integer()
     {
-        var testMethod = typeof(WorkItemsTests).GetMethod(nameof(WorkItem_Integer));
+        var testMethod = typeof(WorkItemAttributeTests).GetMethod(nameof(WorkItem_Integer));
         testMethod.Should()
             .BeDecoratedWith<FactAttribute>()
             .And.BeDecoratedWith<WorkItemAttribute>()
@@ -29,7 +29,7 @@ public class WorkItemsTests
     [WorkItem("666 a")]
     public void WorkItem_String()
     {
-        var testMethod = typeof(WorkItemsTests).GetMethod(nameof(WorkItem_String));
+        var testMethod = typeof(WorkItemAttributeTests).GetMethod(nameof(WorkItem_String));
         testMethod.Should()
             .BeDecoratedWith<FactAttribute>()
             .And.BeDecoratedWith<WorkItemAttribute>()

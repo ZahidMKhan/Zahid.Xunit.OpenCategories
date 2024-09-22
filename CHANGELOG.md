@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0.4] - 2024-09-22
+
+### Added
+
+- Added `Component` attribute
+- Improved descriptions for attributes
+- Add additional testing for discoverers
+
 ## [1.0.4.5] - 2024-09-18
 
 ### Fixed
@@ -43,7 +51,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Modified to use custom GA workflows
 - Published to NuGet
 
-[unreleased]: https://github.com/baynezy/Xunit.OpenCategories/compare/1.0.4.5...HEAD
+[unreleased]: https://github.com/baynezy/Xunit.OpenCategories/compare/1.1.0.4...HEAD
+[1.1.0.4]: https://github.com/baynezy/Xunit.OpenCategories/compare/1.0.4.5...1.1.0.4
 [1.0.4.5]: https://github.com/baynezy/Xunit.OpenCategories/compare/1.0.3.3...1.0.4.5
 [1.0.3.3]: https://github.com/baynezy/Xunit.OpenCategories/compare/1.0.2.2...1.0.3.3
 [1.0.2.2]: https://github.com/baynezy/Xunit.OpenCategories/compare/1.0.1.2...1.0.2.2
