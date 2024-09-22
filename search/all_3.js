@@ -6,7 +6,7 @@ var searchData=
   ['databasetestdiscoverer_2ecs_3',['DatabaseTestDiscoverer.cs',['../_database_test_discoverer_8cs.html',1,'']]],
   ['description_4',['Description',['../class_xunit_1_1_open_categories_1_1_description_attribute.html#acc87959a8774f182d2a8c5ecd948e788',1,'Xunit::OpenCategories::DescriptionAttribute']]],
   ['descriptionattribute_5',['DescriptionAttribute',['../class_xunit_1_1_open_categories_1_1_description_attribute.html#ae047826dd9880970874e25b0d5e6575d',1,'Xunit.OpenCategories.DescriptionAttribute.DescriptionAttribute()'],['../class_xunit_1_1_open_categories_1_1_description_attribute.html',1,'Xunit.OpenCategories.DescriptionAttribute']]],
-  ['descriptionattribute_20_2ecs_6',['DescriptionAttribute .cs',['../_description_attribute_01_8cs.html',1,'']]],
+  ['descriptionattribute_2ecs_6',['DescriptionAttribute.cs',['../_description_attribute_8cs.html',1,'']]],
   ['descriptiondiscoverer_7',['DescriptionDiscoverer',['../class_xunit_1_1_open_categories_1_1_description_discoverer.html',1,'Xunit::OpenCategories']]],
   ['descriptiondiscoverer_2ecs_8',['DescriptionDiscoverer.cs',['../_description_discoverer_8cs.html',1,'']]],
   ['discovererutil_9',['DiscovererUtil',['../class_xunit_1_1_open_categories_1_1_discoverer_util.html',1,'Xunit::OpenCategories']]],
