@@ -11,6 +11,11 @@ on:
         type: boolean
         required: false
         default: false
+      version-suffix:
+        description: 'The suffix to append to the version number'
+        type: string
+        required: false
+        default: ''
     outputs:
       version:
         description: 'The version of the app'
@@ -55,6 +60,11 @@ jobs:
 
           if [ "${{ inputs.is-pre-release }}" == true ]; then
             suffix="-beta"
+          fi
+          
+          if [ "${{ inputs.version-suffix }}" != "" ]; then
+            sanitized_suffix=$(echo "${{ inputs.version-suffix }}" | sed 's/\//-/g')
+            suffix="${suffix}-${sanitized_suffix}"
           fi
           
           if [ "${{ inputs.static-build }}" == true ]; then
