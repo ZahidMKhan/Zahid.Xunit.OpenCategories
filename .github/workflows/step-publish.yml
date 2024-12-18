@@ -22,4 +22,4 @@ jobs:
       deploy-env: ${{ inputs.deploy-env }}
       deploy-branch: ${{ inputs.deploy-branch }}
       version: ${{ inputs.version }}
-      package-name: Html2Markdown
+      package-name: XunitOpenCategories
