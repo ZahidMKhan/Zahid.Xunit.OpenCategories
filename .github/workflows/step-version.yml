@@ -64,7 +64,7 @@ jobs:
           
           if [ "${{ inputs.version-suffix }}" != "" ]; then
             sanitized_suffix=$(echo "${{ inputs.version-suffix }}" | sed 's/\//-/g')
-            suffix="${suffix}${sanitized_suffix}"
+            suffix="${suffix}-${sanitized_suffix}"
           fi
           
           if [ "${{ inputs.static-build }}" == true ]; then

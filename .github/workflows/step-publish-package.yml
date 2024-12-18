@@ -36,6 +36,12 @@ jobs:
         if: ${{ inputs.deploy-env == 'github-beta' }}
         run: |
           dotnet nuget add source --username baynezy --password ${{ secrets.NUGET_API_KEY }} --store-password-in-clear-text --name github ${{ vars.NUGET_SOURCE }}
-      - name: Push package to NuGet
+      - name: Push package
         run: |
-          dotnet nuget push $(find ./src/Xunit.OpenCategories/bin/Release/*.nupkg) --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ vars.NUGET_SOURCE }}
+          source="${{ vars.NUGET_SOURCE }}"
+          
+          if [ "${{ inputs.deploy-env }}" == "github-beta" ]; then
+              source="github"
+          fi
+          
+          dotnet nuget push $(find ./src/Xunit.OpenCategories/bin/Release/*.nupkg) --api-key ${{ secrets.NUGET_API_KEY }} --source ${source}
