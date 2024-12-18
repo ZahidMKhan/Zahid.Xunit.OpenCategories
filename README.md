@@ -25,28 +25,28 @@ Also both key and value must be specified on the command line. This means if you
 
 ## Friendly Attributes Included
 
-| Attribute          | Description                                                                                                          |
-|--------------------|----------------------------------------------------------------------------------------------------------------------|
-| `Author`           | The person who wrote the test                                                                                        |
-| `Bug`              | The bug number associated with the test                                                                              |
-| `Category`         | The category of the test                                                                                             |
-| `Component`        | The component of the test                                                                                            |
-| `Database Test`    | A database test                                                                                                      |
-| `Description`      | The description of the test                                                                                          |
-| `Documentation`    | A test case that exist primarily to document how something should work                                               |
-| `Expensive`        | A test that is expensive to run                                                                                      |
-| `Exploratory`      | For tests that have a exploratory purpose like trying out an unknown API. Not necessarily relating to your own code. |
-| `Feature`          | Tests relating to a specific feature                                                                                 |
-| `Integration Test` | Integrations tests                                                                                                   |
-| `Known Bug`        | For failing tests relating to known bugs that should not fail a build                                                |
-| `Local Test`       | For tests that should only be executed locally and excluded from automated pipeline runs                             |
-| `Snapshot Test`    | A snapshot test                                                                                                      |
-| `Specification`    | A specification test                                                                                                 |
-| `System Test`      | A system test                                                                                                        |
-| `Test Case`        | A test case                                                                                                          |
-| `Unit Test`        | A unit test                                                                                                          |
-| `User Story`       | A user story                                                                                                         |
-| `Work Item`        | A related work item                                                                                                  |
+| Attribute         | Description                                                                                                          |
+|-------------------|----------------------------------------------------------------------------------------------------------------------|
+| `Author`          | The person who wrote the test                                                                                        |
+| `Bug`             | The bug number associated with the test                                                                              |
+| `Category`        | The category of the test                                                                                             |
+| `Component`       | The component of the test                                                                                            |
+| `DatabaseTest`    | A database test                                                                                                      |
+| `Description`     | The description of the test                                                                                          |
+| `Documentation`   | A test case that exist primarily to document how something should work                                               |
+| `Expensive`       | A test that is expensive to run                                                                                      |
+| `Exploratory`     | For tests that have a exploratory purpose like trying out an unknown API. Not necessarily relating to your own code. |
+| `Feature`         | Tests relating to a specific feature                                                                                 |
+| `IntegrationTest` | Integrations tests                                                                                                   |
+| `KnownBug`        | For failing tests relating to known bugs that should not fail a build                                                |
+| `LocalTest`       | For tests that should only be executed locally and excluded from automated pipeline runs                             |
+| `SnapshotTest`    | A snapshot test                                                                                                      |
+| `Specification`   | A specification test                                                                                                 |
+| `SystemTest`      | A system test                                                                                                        |
+| `TestCase`        | A test case                                                                                                          |
+| `UnitTest`        | A unit test                                                                                                          |
+| `UserStory`       | A user story                                                                                                         |
+| `WorkItem`        | A related work item                                                                                                  |
 
 Open an issue or pull request to add more.
 
