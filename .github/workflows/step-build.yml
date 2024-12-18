@@ -56,5 +56,5 @@ jobs:
       if: ${{ github.actor != 'dependabot[bot]' }}
       uses: actions/upload-artifact@v4
       with:
-        name: Html2Markdown
+        name: XunitOpenCategories
         path: ./src/Xunit.OpenCategories/bin/Release/*.nupkg
