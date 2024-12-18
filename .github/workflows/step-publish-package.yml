@@ -32,6 +32,16 @@ jobs:
         uses: actions/setup-dotnet@v4.1.0
         with:
           dotnet-version: 8.0.x
-      - name: Push package to NuGet
+      - name: Publish Package
+        if: ${{ inputs.deploy-env == 'github-beta' }}
         run: |
-          dotnet nuget push $(find ./src/Xunit.OpenCategories/bin/Release/*.nupkg) --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
+          dotnet nuget add source --username baynezy --password ${{ secrets.NUGET_API_KEY }} --store-password-in-clear-text --name github ${{ vars.NUGET_SOURCE }}
+      - name: Push package
+        run: |
+          source="${{ vars.NUGET_SOURCE }}"
+          
+          if [ "${{ inputs.deploy-env }}" == "github-beta" ]; then
+              source="github"
+          fi
+          
+          dotnet nuget push $(find ./src/Xunit.OpenCategories/bin/Release/*.nupkg) --api-key ${{ secrets.NUGET_API_KEY }} --source ${source}
