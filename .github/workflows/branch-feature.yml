@@ -20,6 +20,7 @@ jobs:
     secrets: inherit
     with:
       is-pre-release: true
+      version-suffix: ${{ github.base_ref }}
 
   build:
     needs: [get-version]
@@ -33,3 +34,18 @@ jobs:
     needs: [get-version]
     uses: ./.github/workflows/step-check-markdown.yml
     secrets: inherit
+
+  publish-to-nuget:
+    needs: [get-version,build]
+    uses: ./.github/workflows/step-publish.yml
+    secrets: inherit
+    with:
+      deploy-env: github-beta
+      deploy-branch: ${{ github.base_ref }}
+      version: ${{ needs.get-version.outputs.version }}
+  
+  tag-release:
+    needs: [get-version,publish-to-nuget]
+    uses: ./.github/workflows/step-tag-release.yml
+    with:
+      version: ${{ needs.get-version.outputs.version }}
