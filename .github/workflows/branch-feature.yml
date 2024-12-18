@@ -20,7 +20,7 @@ jobs:
     secrets: inherit
     with:
       is-pre-release: true
-      version-suffix: ${{ github.event.pull_request.number }}
+      version-suffix: ${{ github.base_ref }}
 
   build:
     needs: [get-version]
