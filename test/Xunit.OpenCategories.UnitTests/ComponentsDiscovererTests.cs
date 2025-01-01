@@ -40,8 +40,9 @@ public class ComponentsDiscovererTests : BaseDiscovererTests<ComponentsDiscovere
         var traits = Discoverer.GetTraits(MockTraitAttribute);
 
         // assert
-        traits.ToList()[1].Should().Be(new KeyValuePair<string, string>("Component", "UI"));
-        traits.ToList()[2].Should().Be(new KeyValuePair<string, string>("Component", "Database"));
+        var keyValuePairs = traits as KeyValuePair<string, string>[] ?? traits.ToArray();
+        keyValuePairs.ToList()[1].Should().Be(new KeyValuePair<string, string>("Component", "UI"));
+        keyValuePairs.ToList()[2].Should().Be(new KeyValuePair<string, string>("Component", "Database"));
     }
 
     [Fact]
