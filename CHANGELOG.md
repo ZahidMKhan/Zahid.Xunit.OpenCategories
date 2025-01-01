@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Fixed the issue with CI not running properly for PRs from forks
 - Removed unnecessary spaced from attribute names in README
+- Fixed possible multiple enumeration issue in test
 
 ## [1.1.0.4] - 2024-09-22
 
