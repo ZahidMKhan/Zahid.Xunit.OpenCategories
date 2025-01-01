@@ -7,7 +7,8 @@ on:
         type: string
       checkout-ref:
         description: 'The commit SHA to checkout'
-        required: true
+        required: false
+        default: ''
         type: string
   
 jobs:
@@ -17,10 +18,14 @@ jobs:
     - name: Log Branch
       run: |
         echo "Branch: ${{ inputs.checkout-ref }}"
-    - name: Checkout
+    - name: Checkout Specific Ref
+      if: ${{ inputs.checkout-ref != '' }}
       uses: actions/checkout@v4
       with:
         ref: ${{ inputs.checkout-ref }}
+    - name: Checkout
+      if: ${{ inputs.checkout-ref == '' }}
+      uses: actions/checkout@v4
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v4.2.0
       with:
