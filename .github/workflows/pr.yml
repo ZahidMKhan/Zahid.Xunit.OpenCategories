@@ -1,7 +1,7 @@
-name: Deploy Feature Branch
+name: Check PR
 
 on:
-  pull_request:
+  pull_request_target:
     types: [opened, synchronize]
     branches:
       - develop
@@ -9,17 +9,16 @@ on:
       - 'src/**'
       - 'test/**'
       - '**.cake'
-      - '.github/workflows/branch-feature.yml'
+      - '.github/workflows/pr.yml'
       - '.github/workflows/step-*.yml'
   workflow_dispatch:
 
 jobs:
   get-version:
-    if: startsWith(github.head_ref, 'feature/')
+    if: ${{ github.event.pull_request.head.repo.full_name != github.repository }}
     uses: ./.github/workflows/step-version.yml
     secrets: inherit
     with:
-      is-pre-release: true
       version-suffix: ${{ github.head_ref }}
 
   build:
@@ -34,18 +33,3 @@ jobs:
     needs: [get-version]
     uses: ./.github/workflows/step-check-markdown.yml
     secrets: inherit
-
-  publish-to-nuget:
-    needs: [get-version,build]
-    uses: ./.github/workflows/step-publish.yml
-    secrets: inherit
-    with:
-      deploy-env: github-beta
-      deploy-branch: ${{ github.base_ref }}
-      version: ${{ needs.get-version.outputs.version }}
-  
-  tag-release:
-    needs: [get-version,publish-to-nuget]
-    uses: ./.github/workflows/step-tag-release.yml
-    with:
-      version: ${{ needs.get-version.outputs.version }}

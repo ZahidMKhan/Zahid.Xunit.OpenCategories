@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added `Components` attribute
 
+### Fixed
+
+- Fixed the issue with CI not running properly for PRs from forks
+
 ## [1.1.0.4] - 2024-09-22
 
 ### Added
