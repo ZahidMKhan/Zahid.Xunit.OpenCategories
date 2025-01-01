@@ -20,34 +20,34 @@ and did not get a response. So in order to keep the project alive I forked it.
 ## Messy Traits?
 The xUnit built in option *Traits* can get a little messy. Its just 2 strings representing a key and value, unless you are familiar with xUnit and the Trait attribute it looks a little magical.
 
-Also both key and value must be specified on the command line. This means if you decorate your test with 
+Also, both key and value must be specified on the command line. This means if you decorate your test with 
 `[Trait("Category","Bug")]` you cannot run only tests from a specific bug  without adding another trait `([Trait("Bug","8675309"])`
 
 ## Friendly Attributes Included
 
-| Attribute          | Description                                                                                                          |
-|--------------------|----------------------------------------------------------------------------------------------------------------------|
-| `Author`           | The person who wrote the test                                                                                        |
-| `Bug`              | The bug number associated with the test                                                                              |
-| `Category`         | The category of the test                                                                                             |
-| `Component`        | The component of the test                                                                                            |
-| `Components`       | The list of components of the test                                                                                   |
-| `Database Test`    | A database test                                                                                                      |
-| `Description`      | The description of the test                                                                                          |
-| `Documentation`    | A test case that exist primarily to document how something should work                                               |
-| `Expensive`        | A test that is expensive to run                                                                                      |
-| `Exploratory`      | For tests that have a exploratory purpose like trying out an unknown API. Not necessarily relating to your own code. |
-| `Feature`          | Tests relating to a specific feature                                                                                 |
-| `Integration Test` | Integrations tests                                                                                                   |
-| `Known Bug`        | For failing tests relating to known bugs that should not fail a build                                                |
-| `Local Test`       | For tests that should only be executed locally and excluded from automated pipeline runs                             |
-| `Snapshot Test`    | A snapshot test                                                                                                      |
-| `Specification`    | A specification test                                                                                                 |
-| `System Test`      | A system test                                                                                                        |
-| `Test Case`        | A test case                                                                                                          |
-| `Unit Test`        | A unit test                                                                                                          |
-| `User Story`       | A user story                                                                                                         |
-| `Work Item`        | A related work item                                                                                                  |
+| Attribute         | Description                                                                                                          |
+|-------------------|----------------------------------------------------------------------------------------------------------------------|
+| `Author`          | The person who wrote the test                                                                                        |
+| `Bug`             | The bug number associated with the test                                                                              |
+| `Category`        | The category of the test                                                                                             |
+| `Component`       | The component of the test                                                                                            |
+| `Components`      | The list of components of the test                                                                                   |
+| `Database Test`   | A database test                                                                                                      |
+| `Description`     | The description of the test                                                                                          |
+| `Documentation`   | A test case that exist primarily to document how something should work                                               |
+| `Expensive`       | A test that is expensive to run                                                                                      |
+| `Exploratory`     | For tests that have a exploratory purpose like trying out an unknown API. Not necessarily relating to your own code. |
+| `Feature`         | Tests relating to a specific feature                                                                                 |
+| `IntegrationTest` | Integrations tests                                                                                                   |
+| `KnownBug`        | For failing tests relating to known bugs that should not fail a build                                                |
+| `LocalTest`       | For tests that should only be executed locally and excluded from automated pipeline runs                             |
+| `SnapshotTest`    | A snapshot test                                                                                                      |
+| `Specification`   | A specification test                                                                                                 |
+| `SystemTest`      | A system test                                                                                                        |
+| `TestCase`        | A test case                                                                                                          |
+| `UnitTest`        | A unit test                                                                                                          |
+| `UserStory`       | A user story                                                                                                         |
+| `WorkItem`        | A related work item                                                                                                  |
 
 Open an issue or pull request to add more.
 
