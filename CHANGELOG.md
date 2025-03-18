@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0.7] - 2025-03-18
+
 ### Added
 
 - Upgraded to .NET 8.0
@@ -74,7 +76,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Modified to use custom GA workflows
 - Published to NuGet
 
-[unreleased]: https://github.com/baynezy/Xunit.OpenCategories/compare/1.2.0.5...HEAD
+[unreleased]: https://github.com/baynezy/Xunit.OpenCategories/compare/2.0.0.7...HEAD
+[2.0.0.7]: https://github.com/baynezy/Xunit.OpenCategories/compare/1.2.0.5...2.0.0.7
 [1.2.0.5]: https://github.com/baynezy/Xunit.OpenCategories/compare/1.1.0.4...1.2.0.5
 [1.1.0.4]: https://github.com/baynezy/Xunit.OpenCategories/compare/1.0.4.5...1.1.0.4
 [1.0.4.5]: https://github.com/baynezy/Xunit.OpenCategories/compare/1.0.3.3...1.0.4.5
