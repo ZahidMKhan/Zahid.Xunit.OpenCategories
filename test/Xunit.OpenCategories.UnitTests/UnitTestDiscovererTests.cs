@@ -1,8 +1,4 @@
-﻿using System.Collections.Generic;
-using FluentAssertions;
-using NSubstitute;
-
-namespace Xunit.OpenCategories.UnitTests;
+﻿namespace Xunit.OpenCategories.UnitTests;
 
 public class UnitTestDiscovererTests : BaseDiscovererTests<UnitTestDiscoverer>
 {
@@ -27,7 +23,7 @@ public class UnitTestDiscovererTests : BaseDiscovererTests<UnitTestDiscoverer>
     [Fact]
     public void GetTraits_DoesNotReturnUnitTest_WhenIdentifierIsNull()
     {
-        MockTraitAttribute.GetNamedArgument<string>("Identifier").Returns((string)null);
+        MockTraitAttribute.GetNamedArgument<string>("Identifier").Returns((string)null!);
 
         var traits = Discoverer.GetTraits(MockTraitAttribute);
 

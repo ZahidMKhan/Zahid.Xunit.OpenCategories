@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using FluentAssertions;
-using NSubstitute;
-using Xunit.Abstractions;
+﻿using Xunit.Abstractions;
 
 namespace Xunit.OpenCategories.UnitTests;
 
@@ -26,7 +23,7 @@ public class BugDiscovererTests : BaseDiscovererTests<BugDiscoverer>
     {
         // arrange
         Substitute.For<IAttributeInfo>();
-        MockTraitAttribute.GetNamedArgument<string>("Id").Returns((string)null);
+        MockTraitAttribute.GetNamedArgument<string>("Id").Returns((string)null!);
 
         // act
         var traits = Discoverer.GetTraits(MockTraitAttribute);

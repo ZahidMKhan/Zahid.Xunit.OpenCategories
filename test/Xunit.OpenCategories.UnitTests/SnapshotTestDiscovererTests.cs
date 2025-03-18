@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using FluentAssertions;
-
-namespace Xunit.OpenCategories.UnitTests;
+﻿namespace Xunit.OpenCategories.UnitTests;
 
 public class SnapshotTestDiscovererTests : BaseDiscovererTests<SnapshotTestDiscoverer>
 {

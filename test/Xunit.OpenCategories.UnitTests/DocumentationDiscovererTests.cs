@@ -1,8 +1,4 @@
-﻿using System.Collections.Generic;
-using FluentAssertions;
-using NSubstitute;
-
-namespace Xunit.OpenCategories.UnitTests;
+﻿namespace Xunit.OpenCategories.UnitTests;
 
 public class DocumentationDiscovererTests : BaseDiscovererTests<DocumentationDiscoverer>
 {
@@ -27,7 +23,7 @@ public class DocumentationDiscovererTests : BaseDiscovererTests<DocumentationDis
     [Fact]
     public void GetTraits_ReturnsEmpty_WhenWorkItemIdIsNull()
     {
-        MockTraitAttribute.GetNamedArgument<string>("WorkItemId").Returns((string) null);
+        MockTraitAttribute.GetNamedArgument<string>("WorkItemId").Returns((string) null!);
 
         var traits = Discoverer.GetTraits(MockTraitAttribute);
 

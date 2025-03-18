@@ -12,6 +12,11 @@ updates:
     labels:
       - "dependencies"
     open-pull-requests-limit: 10
+    groups:
+      xunit:
+        patterns:
+          - "xunit.v3"
+          - "xunit.v3.*"
 
   - package-ecosystem: "github-actions"
     directory: "/" # Location of package manifests
